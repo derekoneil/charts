@@ -77,8 +77,8 @@ global:
     #     Redirect no inbound traffic to Envoy:    --includeInboundPorts=""
     #     Redirect all inbound traffic to Envoy:   --includeInboundPorts="*"
     #     Redirect only selected ports:            --includeInboundPorts="80,8080"
-    includeInboundPorts: "*"
-    excludeInboundPorts: ""
+    includeInboundPorts: ""
+    excludeInboundPorts: "*"
 
     # This controls the 'policy' in the sidecar injector.
     autoInject: enabled
