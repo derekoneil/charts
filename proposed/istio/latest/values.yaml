@@ -1,5 +1,7 @@
 # Common settings.
 global:
+  outboundTrafficPolicy:
+    mode: ALLOW_ANY
   # Default hub for Istio images.
   # Releases are published to docker hub under 'istio' project.
   # Daily builds from prow are on gcr.io, and nightly builds from circle on docker.io/istionightly
@@ -77,8 +79,8 @@ global:
     #     Redirect no inbound traffic to Envoy:    --includeInboundPorts=""
     #     Redirect all inbound traffic to Envoy:   --includeInboundPorts="*"
     #     Redirect only selected ports:            --includeInboundPorts="80,8080"
-    includeInboundPorts: "*"
-    excludeInboundPorts: ""
+    includeInboundPorts: ""
+    excludeInboundPorts: "*"
 
     # This controls the 'policy' in the sidecar injector.
     autoInject: enabled
