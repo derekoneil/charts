@@ -1,7 +1,7 @@
 # Common settings.
 global:
-  outboundTrafficPolicy:
-    mode: ALLOW_ANY
+  #outboundTrafficPolicy:
+  #  mode: ALLOW_ANY
   # Default hub for Istio images.
   # Releases are published to docker hub under 'istio' project.
   # Daily builds from prow are on gcr.io, and nightly builds from circle on docker.io/istionightly
@@ -71,7 +71,7 @@ global:
     # example: includeIPRanges: "172.30.0.0/16,172.20.0.0/16"
     # would only capture egress traffic on those two IP Ranges, all other outbound traffic would
     # be allowed by the sidecar
-    includeIPRanges: "10.42.0.0/16"
+    includeIPRanges: ""
     excludeIPRanges: ""
 
     # istio ingress capture whitelist
